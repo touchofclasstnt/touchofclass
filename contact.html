@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utd-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <title>Contact | Touch Of Class</title>
+        <link rel="icon" href="html2/favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <script>
+           function openSlideMenu(){
+               document.getElementById('menu').style.width = '200px'
+               document.getElementById('content').style.marginLeft = '250px'
+           }
+        
+           function closeSlideMenu(){
+               document.getElementById('menu').style.width = '0'
+               document.getElementById('content').style.marginLeft = '0'
+           }
+
+
+           window.addEventListener('mouseup', function(event){
+               var box = document.getElementById('content' && 'menu');
+               if(event.target !=box && event.target.parentNode !=box){
+                document.getElementById('content').style.marginLeft = '0';
+                document.getElementById('menu').style.width = '0';
+               }
+           });
+
+        </script>
+
+        <script>
+           
+            document.querySelector('#logo');
+
+            window.onscroll = function(){
+                var top = window.scrollY;
+               console.log(top);
+               if (top >= 120){
+                   logo.classList.add('active')
+               }else{
+                   logo.classList.remove('active')
+               }
+            }
+
+        
+            
+
+
+
+        </script>
+       
+       <style>
+
+            body {
+                margin:0;
+                padding:0;
+                background-color: #ffffff;
+                overflow-x: hidden;
+            }
+
+            .nav {
+          height: 100%;
+          width: 0;
+          position:fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: rgba(255, 255, 255, 0.979);
+          background-attachment: fixed;
+          padding-top: 60px;
+          transition: 0.7s;
+          overflow-x: hidden;
+      }
+
+      .nav a {
+          display: block;
+          font-size:25px;
+          text-decoration: none;
+          line-height: 7px;
+          padding:20px 30px;
+          color:#ff00c8;
+          font-family: 'Alegreya Sans', sans-serif;
+          z-index: 2;
+      }
+
+      .nav .close {
+          position: absolute;
+          top:0px;
+          right:25px;
+          margin-right: 1px;
+          color:#ff00c8;
+          border:none;
+          box-shadow:none;
+      }
+
+      .slide a {
+          color:#ff00c8;
+          font-size: 25px;
+          background-color: #ffffff;
+          padding:10px 12px;
+          border-radius:100%;
+          box-shadow:2px 2px 2px rgb(0, 0, 0, 0.3)
+          
+      }
+
+      #content {
+          position:absolute;
+          visibility: hidden;
+          padding:20px;
+          transition: margin-left 0.7s;
+      }
+
+      @media only screen and (max-width:700px) {
+
+#content {
+  position: fixed;
+  top:0;
+  left:0;
+  visibility: visible;
+  padding:20px;
+  transition: margin-left 0.7s;
+}
+
+
+}
+
+      @media only screen and (max-width:650px) {
+
+        #content {
+          position: fixed;
+          top:0;
+          left:0;
+          visibility: visible;
+          padding:20px;
+          transition: margin-left 0.7s;
+      }
+
+
+      }
+
+
+            html {
+                scroll-behavior:smooth;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+
+            .container {
+                margin: 0 auto;
+                width:100%;
+                padding: 0;
+                font-size: 20px;
+                line-height: 20px;
+                text-align: center;
+               
+            }
+
+            header {
+                position: fixed;
+                width:100%;
+                height:47px;
+                background-color: #eeeeeef6;
+                top:0;
+                box-shadow:2px 2px 25px rgb(0, 0, 0);
+                border-bottom: 2px solid #ff00c8;
+                z-index: 100;
+                display: flex;
+                justify-content: center;
+                align-items:center ;
+                transition: 0.2s;
+                
+            }
+
+            header a {
+                padding:5px 32px;
+                margin-left:5px;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+                border-radius: 4px;
+                border:1px solid transparent;
+                color:#ff00c8;
+                transition: 0.4s;
+            }
+
+            header a:hover {
+                background-color:#eeeeee;
+                box-shadow: -5px -5px 5px 0 rgb(255, 255, 255, 1), 5px 5px 5px 0 rgb(0, 0, 0, 0.3);
+                border-radius:55px;
+                transition: 0.4s;
+            }
+
+            #contact {
+                color:#ff00c8;
+                background-color:#eeeeee;
+                border-radius:55px;
+                box-shadow: -5px -5px 5px 0 rgb(255, 255, 255, 1), 5px 5px 5px 0 rgb(0, 0, 0, 0.3);
+            }
+
+            #logo {
+                display:block;
+                justify-content: left;
+                transform: translate(0px, 30px);
+                border-radius:80px;
+                background-color:#fffffff3;
+                transition: all 0.5s;
+                
+            }
+
+            #logo.active {
+                transform: translate(0px, -20px);
+                filter:blur(8px);
+                width:0px;
+                transition: all 0.5s;
+            }
+
+            #intro {
+                width:50%;
+                height:100%;
+                text-align: left;
+                padding-right: 40px;
+                padding-left:120px;
+            }
+
+            #title1 {
+                color: rgb(0, 0, 0);
+                font-size: 72px;
+                font-family: 'Montserrat', sans-serif;
+                margin:0;
+                padding-top:30vh;
+                padding-bottom: 25px;
+            }
+
+            #cont-para {
+                text-align: left;
+            }
+
+            p {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 17px;
+                opacity: 0;
+                transition: 1.2s;
+            }
+
+            p[data-scroll="in"] {
+                opacity: 1;
+                transition: 1.5s;
+                
+            }
+
+            .paralx {
+                background:url('html2/contact/contact2.png') no-repeat right;
+                width:100%;
+                height:50vh;
+                background-size:650px;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                animation:4.5s wallpaper;
+            }
+
+            @keyframes wallpaper{
+                0% {
+                    transform:translateY(-2000px)
+                }
+
+                25% {
+                    transform:translateY(0)
+                }
+
+                50% {
+                    transform:translateY(-50px)
+                }
+
+                75% {
+                    transform:translateY(0)
+                }
+
+                90% {
+                    transform: translateY(0);
+                }
+
+                100% {
+                    transform:translateY(0)
+                }
+            }
+
+            .hDGnqR,.hOnFlx,.hOnFlx,.hqsrSh, .ioFWLq,.acKCA,.dPhWdq {
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            #contact-list {
+                list-style-type: none;
+            }
+
+            #contact-list li {
+                color:white;
+                font-family: 'Open Sans', sans-serif;
+                font-size:16px;
+                padding:6px;
+            }
+
+            #contact-list li a {
+                text-emphasis: none;
+            }
+
+            #contact-list li .icon{
+                font-size: 23px;
+                width:35px;
+            }
+
+            .contact-info {
+                position:relative;
+                width:60%;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                margin-left:20%;
+                color:white;
+                border-radius:4px;
+                margin-top: 50px;
+                animation: 2s load forwards;
+                animation-delay: 1.4s;
+            }
+
+            @keyframes load {
+                0% {
+                    transform: translateX(60%);
+                    background-color:white;
+                }
+
+                100% {
+                    transform:translateX(0);
+                    background-color:#ff00c8;
+                    box-shadow:0px 20px 20px rgb(0, 0, 0, 0.2);
+                }
+            }
+
+            #contact-list2 {
+               height: 100%;
+               text-align: center;
+               padding:15px 15px;
+               margin: 0;
+               list-style: none;
+            }  
+
+            #contact-list2 li {
+                padding:10px 5px;
+                transition: 0.3s;
+                margin-bottom:5px;
+            } 
+
+            #contact-list2 li .icon2{
+                font-size: 28px;
+                width:35px;
+            }
+
+            #contact-list2 li .icon3{
+                font-size: 45px;
+                width:32px;
+            }
+
+            #contact-list2 li .icon4{
+                font-size: 35px;
+                width:35px;
+            }
+
+            .contact-icons {
+                position: absolute;
+                top:-25px;
+                right:15.5%;
+                background-color:rgb(255, 255, 255);
+                box-shadow: -5px -5px 10px rgb(0, 0, 0, 0.2);
+                border:2px solid #ececec;
+                color:black;
+                width:90px;
+                height:fit-content;
+            }
+
+            .contact-info h1 {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 35px;
+            }
+
+            #relative {
+                position: relative;
+            }
+
+            #phone {
+                color:rgb(91, 91, 255);
+                transition: 0.3s;
+            }
+
+            .phone {
+                background-color: rgb(228, 228, 228);
+                border-radius:5px;
+                transition: 0.3s;
+            }
+
+            #whatsapp {
+                color:#ffffff;
+            }
+
+            .whatsapp {
+                background-color:#25D366;
+                border-radius:5px;
+                transition: 0.3s;
+            }
+
+            .contact-icons #contact-list #what {
+                padding:4px;
+            }
+
+            #gmail {
+                color:rgb(248, 248, 248);
+            }
+
+            .gmail {
+                background-color:rgb(255, 60, 0);
+                border-radius:5px;
+                transition: 0.3s;
+            }
+
+            #insta-click {
+                color:rgb(255, 255, 255);
+            }
+
+            .ig {
+                background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+                border-radius:5px;
+                transition: 0.3s;
+            }
+
+            #fb-padding {
+                margin: 0;
+            }
+
+            #fb {
+                color:#ffffff;
+            }
+
+            .fb {
+                background-color: #4267B2;
+                margin:0;
+                border-radius:5px;
+                transition: 0.3s;
+            }
+
+            .white {
+                position: absolute;
+                top:-25px;
+                right:0;
+                background-color: rgb(255, 255, 255);
+                user-select: none;
+                width:15.5%;
+                height:120%;
+                color:transparent;
+            }
+
+            .drop-content {
+                position:absolute;
+                top:42px;
+                list-style: none;
+                visibility: hidden;
+                display: grid;
+                background-color:white;
+                box-shadow: 0 20px 20px rgb(0, 0, 0, 0.3);
+                border-radius: 10px;
+                transition: 0s;
+            }
+
+            .drop-content a {
+                background-color:transparent;
+                border-radius:0;
+                margin: 0;
+                font-size: 16px;
+                padding:18px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold;
+                transition: 0s;
+            }
+
+            .drop-content a:hover {
+                background-color:#ff00c8;
+                border-radius:0;
+                color:white;
+                box-shadow: none;
+                transition: 0.3s;
+            }
+
+            .drop-content #top-a:hover {
+                border-radius:10px 10px 0 0;
+            }
+
+            .drop-content #bottom-a:hover {
+                border-radius:0 0 10px 10px;
+            }
+
+
+            .dropdown:hover .drop-content {
+                visibility: visible;
+            }
+
+            .mobile-text {
+                position: absolute;
+                visibility: hidden;
+            }
+
+            @media only screen and (max-width: 600px) {
+                header {
+                position: absolute;
+                visibility: hidden;
+                width:100%;
+                height:48px;
+                top:0;
+                background-color:#eeeeeef6;
+                box-shadow:2px 2px 25px rgb(0, 0, 0);
+                border-bottom: 2px solid #ff00c8;
+                z-index: 100;
+                display: flex;
+                justify-content: center;
+                align-items:center ;
+                transition: 0.2s;
+                
+            }
+
+            header a {
+                padding:0;
+                margin-left:0;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+                border-radius: 4px;
+                border:1px solid transparent;
+                color:#ff00c8;
+                transition: 0.4s;
+            }
+
+            .paralx {
+                height: 180px;
+                background-size: contain;
+            }
+
+            #intro {
+                padding:10px;
+                width:100%;
+                color:transparent;
+                user-select: none;
+            }
+
+            #title1 {
+                font-size:0;
+                padding:0;
+                position:absolute;
+                color:transparent;
+            }
+
+            .social-menu ul {
+                padding:0;
+                margin:0 auto;
+            }
+
+            .contact-icons {
+                position: absolute;
+                top:-25px;
+                right:0;
+                background-color:rgb(255, 255, 255);
+                box-shadow: -5px -5px 10px rgb(0, 0, 0, 0.2);
+                border:2px solid #ececec;
+                color:black;
+                width:55px;
+                height:fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+            }
+
+            #contact-list li {
+                font-size:73%;
+            }
+
+            #contact-list2 {
+               height: 100%;
+               text-align: center;
+               padding:15px 15px;
+               margin: 0;
+               list-style: none;
+            }
+
+            #contact-list2 li {
+                padding:10px 0;
+            }
+
+            #phone {
+                color:rgb(91, 91, 255);
+                transition: 0.3s;
+            }
+
+            .phone {
+                background-color: rgb(228, 228, 228);
+                border-radius:100%;
+                width:45px;
+                transition: 0.3s;
+            }
+
+            #contact-list2 li .icon2 {
+                font-size: 23px;
+            }
+
+            .whatsapp {
+                border-radius:60%;
+                width:45px;
+            }
+
+            #contact-list2 li .icon3 {
+                font-size: 27px;
+            }
+
+            .gmail {
+                border-radius:100%;
+                width:45px;
+            }
+
+            .ig {
+                border-radius: 100%;
+                width:45px;
+            }
+
+            #contact-list2 li .icon4 {
+                font-size: 26px;
+            }
+
+            .fb {
+                border-radius: 100%;
+                width:45px;
+            }
+
+            #contact-list2 li {
+                margin-bottom: 12px;
+            }
+
+            .contact-info {
+                position:relative;
+                width:86%;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                margin-left:1%;
+                color:white;
+                border-radius:4px;
+                margin-top: 50px;
+                animation: 2s load forwards;
+                animation-delay: 1.4s;
+            }
+
+            @keyframes load {
+                0% {
+                    transform: translateX(150%);
+                    background-color:white;
+                }
+
+                100% {
+                    transform:translateX(0);
+                    background-color:#ff00c8;
+                    box-shadow:0px 20px 20px rgb(0, 0, 0, 0.2);
+                }
+            }
+
+            .mobile-text {
+                position: static;
+                visibility: visible;
+                font-family: 'Open Sans', sans-serif;
+                font-size:20px;
+                padding:50px 5px;
+                color:#ff00c8;
+            }
+
+            .white {
+                height:0;
+            }
+            }
+
+            @media only screen and (min-width:601px) and (max-width:1024px) {
+                .paralx {
+                    height:34vh;
+                    background-size: 455px;
+                }
+
+                #intro {
+                    width: 100%;
+                    padding-right: 36px;
+                    padding-left: 34px;
+            }
+
+            #title1 {
+                font-size: 60px;
+                margin: 0;
+                padding-top: 24vh;
+                padding-bottom: 25px;
+            }
+
+            .contact-icons {
+                right:10px;
+                z-index: 1;
+            }
+
+            .white {
+                width:9.5%;
+            }
+
+            .contact-info {
+               width: 100%;
+               margin-left: 2%;
+               margin-top: 105px;
+            }
+            }
+
+
+
+
+        </style>
+    </head>
+    <body>
+      <div class="container" id="scroll-here">
+         <header id="header">
+             <a href="index.html">Home</a>
+             <a href="about.html">About</a>
+             <img src="html2/icon.png" width="120px" id="logo">
+            <div class="dropdown">
+             <a href="gallery.html">Flowers</a>
+               <div class="drop-content">
+                <a id="top-a" href="gallery.html#link">Birthdays</a>
+                <a href="gallery.html#link2">Just Because</a>
+                <a href="gallery.html#link3">Anniversary</a>
+                <a href="gallery.html#link4">Bridal</a>
+                <a href="gallery.html#link5">Centerpieces</a>
+                <a href="gallery.html#link6">Wreaths</a>
+                <a id="bottom-a" href="gallery.html#link7">Artificial catalogue</a>
+               </div>
+            </div>       
+             <a href="contact.html" id="contact">Contact</a>
+         </header> 
+        <div class="paralx">
+           <div id="intro">
+            <h1 id="title1">Contact Us</h1>
+            <p id="cont-para">Want to get in Touch? We'd love to hear from you. Here's how you can reach us...</p>
+           </div>  
+        </div>
+       <div id="relative">
+        <div class="contact-info">
+            <div>
+                <h1>Contact Info</h1>
+                <ul align="left" id="contact-list">
+                    <li><a><i class="fas fa-phone icon"></i> 393-2488/ 728-1018</a></li>
+                    <li><a><i class="fab fa-whatsapp icon"></i> 393-2488/ 728-1018</a></li>
+                    <li><a><i class="fas fa-envelope icon"></i> touchofclasstnt@gmail.com</a></li>
+                    <li><a><i class="fab fa-instagram icon"></i>  @touchofclassfloralstyles</a></li>
+                    <li><a><i class="fab fa-facebook-f icon"></i>TouchofClass FloralStyles</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact-icons">
+            <ul align="left" id="contact-list2">
+                <li class="phone"><a id="phone" href="tel:+18683932488"><i class="fas fa-phone icon2"></i></a></li>
+                <li id="what"class="whatsapp"><a id="whatsapp"  href="https://api.whatsapp.com/send?phone=18683932488"><i class="fab fa-whatsapp icon3"></i></a></li>
+                <li class="gmail"><a id="gmail"  href="mailto:touchofclasstnt@gmail.com?subject=Touch Of Class Floral Request&body=Full Name:%0D%0A%0D%0ARequest:"><i class="fas fa-envelope icon2"></i></a></li>
+                <li class="ig"><a href="https://www.instagram.com/touchofclassfloralstyles/" target="_blank" id="insta-click" ><i class="fab fa-instagram icon4"></i></a></li>
+                <li id="fb-padding" class="fb"><a id="fb" href="https://www.facebook.com/seematouchofclass.kelvin" target="_blank" ><i class="fab fa-facebook-f icon2"></i></a></li>
+            </ul>
+        </div>
+        <div class="white"></div>
+        <div class="mobile-text">We'd love to hear from you!</div>
+    </div>
+        </div>
+        <div id="content">
+            <span class="slide">
+               <a href="#" onclick="openSlideMenu()">
+                 <i class="fas fa-bars"></i>
+               </a>
+            </span>
+            <div id="menu" class="nav">
+                <a href="#" class="close" onclick="closeSlideMenu()">
+                    <i class="fas fa-times"></i>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                </a>
+         </div> 
+         <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+         <div class="elfsight-app-0fefa73a-9937-4d65-8745-ae2f233b81c2"></div>
+      <script src="html2/scroll-out.js"></script>
+      <script type="text/javascript">
+         ScrollOut ({
+             targets: 'h1,h2,#main,#imagediv,h3,p,a'
+         })
+      </script>
+    </body>
+</html>

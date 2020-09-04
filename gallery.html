@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utd-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <title>Flowers | Touch Of Class</title>
+        <link rel="icon" href="html2/favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <script>
+           function openSlideMenu(){
+               document.getElementById('menu').style.width = '200px'
+               document.getElementById('content').style.marginLeft = '250px'
+           }
+        
+           function closeSlideMenu(){
+               document.getElementById('menu').style.width = '0'
+               document.getElementById('content').style.marginLeft = '0'
+           }
+
+
+           window.addEventListener('mouseup', function(event){
+               var box = document.getElementById('content' && 'menu');
+               if(event.target !=box && event.target.parentNode !=box){
+                document.getElementById('content').style.marginLeft = '0';
+                document.getElementById('menu').style.width = '0';
+               }
+           });
+
+        </script>
+
+        <script>
+           
+            document.querySelector('#logo');
+
+            window.onscroll = function(){
+                var top = window.scrollY;
+               console.log(top);
+               if (top >= 120){
+                   logo.classList.add('active')
+               }else{
+                   logo.classList.remove('active')
+               }
+            }
+        
+            
+
+
+
+        </script>
+       
+       <style>
+
+            body {
+                margin:0;
+                padding:0;
+                background-color: #ffffff;
+                overflow-x: hidden;
+            }
+
+            .nav {
+          height: 100%;
+          width: 0;
+          position:fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: rgba(255, 255, 255, 0.979);
+          background-attachment: fixed;
+          padding-top: 60px;
+          transition: 0.7s;
+          overflow-x: hidden;
+      }
+
+      .nav a {
+          display: block;
+          font-size:25px;
+          text-decoration: none;
+          line-height: 7px;
+          padding:20px 30px;
+          color:#ff00c8;
+          font-family: 'Alegreya Sans', sans-serif;
+          z-index: 2;
+      }
+
+      .nav .close {
+          position: absolute;
+          top:0px;
+          right:25px;
+          margin-right: 1px;
+          color:#ff00c8;
+          border:none;
+          box-shadow:none;
+      }
+
+      .slide a {
+          color:#ff00c8;
+          font-size: 25px;
+          background-color: #ffffff;
+          padding:10px 12px;
+          border-radius:100%;
+          box-shadow:2px 2px 2px rgb(0, 0, 0, 0.3)
+          
+      }
+
+      #content {
+          position:absolute;
+          visibility: hidden;
+          padding:0;
+          top:20px;
+          transition: margin-left 0.7s;
+      }
+
+      @media only screen and (max-width:650px) {
+
+        #content {
+          position: fixed;
+          top:0;
+          left:0;
+          visibility: visible;
+          padding:20px;
+          transition: margin-left 0.7s;
+      }
+
+
+      }
+
+
+            html {
+                scroll-behavior:smooth;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+
+            .container {
+                margin: 0 auto;
+                width:100%;
+                padding: 0;
+                font-size: 20px;
+                line-height: 20px;
+                text-align: center;
+               
+            }
+
+            header {
+                position: fixed;
+                width:100%;
+                height:47px;
+                background-color: #eeeeeef6;
+                top:0;
+                box-shadow:2px 2px 25px rgb(0, 0, 0);
+                border-bottom: 2px solid #ff00c8;
+                z-index: 100;
+                display: flex;
+                justify-content: center;
+                align-items:center ;
+                transition: 0.2s;
+                
+            }
+
+            header a {
+                padding:5px 32px;
+                margin-left:5px;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+                border-radius: 4px;
+                border:1px solid transparent;
+                color:#ff00c8;
+                transition: 0.4s;
+            }
+
+            header a:hover {
+                background-color:#eeeeee;
+                box-shadow: -5px -5px 5px 0 rgb(255, 255, 255, 1), 5px 5px 5px 0 rgb(0, 0, 0, 0.3);
+                border-radius:55px;
+                transition: 0.4s;
+            }
+
+            #gallery {
+                color:#ff00c8;
+                background-color:#eeeeee;
+                border-radius:55px;
+                box-shadow: -5px -5px 5px 0 rgb(255, 255, 255, 1), 5px 5px 5px 0 rgb(0, 0, 0, 0.3);
+            }
+
+            #logo {
+                display:block;
+                justify-content: left;
+                transform: translate(0px, 30px);
+                border-radius:80px;
+                background-color:#fffffff3;
+                transition: all 0.5s;
+                
+            }
+
+            #logo.active {
+                transform: translate(0px, -20px);
+                filter:blur(8px);
+                width:0px;
+                transition: all 0.5s;
+            }
+
+            .drop-content {
+                position:absolute;
+                top:42px;
+                list-style: none;
+                visibility: hidden;
+                display: grid;
+                background-color:white;
+                box-shadow: 0 20px 20px rgb(0, 0, 0, 0.3);
+                border-radius: 10px;
+                transition: 0s;
+            }
+
+            .drop-content a {
+                background-color:transparent;
+                border-radius:0;
+                margin: 0;
+                font-size: 16px;
+                padding:18px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold;
+                transition: 0s;
+            }
+
+            .drop-content a:hover {
+                background-color:#ff00c8;
+                border-radius:0;
+                color:white;
+                box-shadow: none;
+                transition: 0.3s;
+            }
+
+            .drop-content #top-a:hover {
+                border-radius:10px 10px 0 0;
+            }
+
+            .drop-content #bottom-a:hover {
+                border-radius:0 0 10px 10px;
+            }
+
+
+            .dropdown:hover .drop-content {
+                visibility: visible;
+            }
+
+            #title1 {
+                color: rgb(108, 228, 212);
+                font-size: 72px;
+                font-family: 'Merienda One', cursive;
+                margin:0 auto;
+                padding:0;
+            }
+
+            p {
+                opacity: 0;
+                transition: 1.2s;
+            }
+
+            p[data-scroll="in"] {
+                opacity: 1;
+                transition: 1.5s;
+                
+            }
+
+            .paralx {
+                background:url('html2/flowerbg.jpg') no-repeat center;
+                background-size: cover;
+                width:100%;
+                height:400px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+
+            .cg-div {
+                display:flex;
+                justify-content: center;
+                padding-top:50px;
+                padding-bottom:50px;
+                background-color: #ffffff;
+                width: 100%;
+                transition: 0.4s;
+            }
+
+            .cg-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin:0 25px;
+                padding:40px;
+                width:55px;
+                height:55px;
+                border-radius: 100%;
+                box-shadow:0px 10px 20px rgb(0, 0, 0, 0.2);
+                cursor: pointer; 
+                transition: 0.4s;
+            }
+            
+            .cg-content:hover {
+                font-size:25px;
+                transition: 0.4s;
+            }
+
+            .cg-content:hover {
+                width:75px;
+                height:75px;
+                transition: 0.4s;
+            }
+
+            .cg-content {
+                color:white;
+                text-decoration: none;
+                font-family: 'Poppins', sans-serif;
+                font-size:20px;
+                transition: 0.4s;
+                text-shadow: 4px 4px 8px rgb(0, 0, 0);
+            }
+
+            .c1 {
+                background:url('html2/flowers/f5dark.png') no-repeat center;   
+                background-size: cover;
+                transition: 0.4s;           
+            }
+
+            .c1:hover {
+                background:url('html2/flowers/f5.JPG') no-repeat center;   
+                background-size: cover;
+                transition: 0.4s;           
+            }
+
+            .c2 {
+                background:url('html2/jb/jb5dark.png') no-repeat center;      
+                background-size: cover;  
+                transition: 0.4s;      
+            }
+
+            .c2:hover {
+                background:url('html2/jb/jb5.JPG') no-repeat center;   
+                background-size: cover;
+                transition: 0.4s;           
+            }
+
+            .c3 {
+                background:url('html2/ann/7dark.png') no-repeat center;     
+                background-size: cover;  
+                transition: 0.4s;       
+            }
+
+            .c3:hover {
+                background:url('html2/ann/7.JPG') no-repeat center;   
+                background-size: cover;
+                transition: 0.4s;           
+            }
+
+            .c3 #anni {
+                font-size:18px;
+            }
+
+            .c3:hover #anni {
+                font-size: 20px;
+            }
+
+            .c4 {
+                background:url('html2/bridal/13dark.png') no-repeat center; 
+                background-size: cover;  
+                transition: 0.4s;           
+            }
+
+            .c4:hover {
+                background:url('html2/bridal/13.PNG') no-repeat center;   
+                background-size: cover;
+                transition: 0.4s;           
+            }
+
+            .c5 {
+                background:url('html2/cent/8dark.png') no-repeat center; 
+                background-size: cover;  
+                transition: 0.4s;           
+            }
+
+            .c5:hover {
+                background:url('html2/cent/8.JPG') no-repeat center;   
+                background-size: cover;
+                transition: 0.4s;           
+            }
+
+            .c6 {
+                background:url('html2/wreat/7dark.png') no-repeat center; 
+                background-size: cover;  
+                transition: 0.4s;           
+            }
+
+            .c6:hover {
+                background:url('html2/wreat/7.JPG') no-repeat center;   
+                background-size: cover;
+                transition: 0.4s;           
+            }
+
+            .c7 {
+                background:url('html2/art/4dark.png') no-repeat center; 
+                background-size: cover;  
+                transition: 0.4s;           
+            }
+
+            .c7:hover {
+                background:url('html2/art/4.JPG') no-repeat center;   
+                background-size: cover;
+                transition: 0.4s;           
+            }
+
+            #cg-title-div {
+              background-color: #ffffff;  
+            }
+
+            #cg-title {
+                font-size: 55px;
+                font-family: 'Rancho', cursive;
+                padding:15px;
+                margin:10px 0 0 0;
+            }
+
+            #goto-top {
+                background-color: #ff00c8;
+                position:fixed;
+                justify-content: center;
+                align-items: center;
+                bottom:40px;
+                right:50px;
+                z-index: 300;
+                padding: 8px;
+                border-radius: 4px;
+                transition: 0.4s;
+                border:2px solid #fd7fe2;
+            }
+
+            #goto-top a {
+                text-decoration: none;
+                color:white;
+                font-size: 30px;
+                transition: 0.4s;
+            }
+
+            #goto-top:hover {
+                background-color:#e0e0e0;
+                border:2px solid #ff00c8;
+                color:#ff00c8;
+                transition: 0.4s;
+            }
+
+            #goto-top:hover a {
+                color:#ff00c8;
+                transition: 0.4s;
+            }
+
+            #wed-title {
+                margin:0;
+                font-size:55px;
+                line-height: 55px;
+                transform: translateY(50px);
+                font-family:'Rancho',cursive;
+            }
+
+            .wedding-grid {
+                display: grid;
+                grid-template-columns: 5fr 5fr 5fr;
+                grid-template-rows: 104fr 148fr 164fr 162fr;
+                grid-template-areas:  "wed1 wed6 wed2"
+                                      "wed1 wed9 wed2"
+                                      "wed8 wed9 wed5"
+                                      "wed3 wed4 wed7";
+                grid-gap:0.35rem;
+                height:1200px;
+                padding: 100px 150px;
+            }
+
+            .wedding-grid div {
+                border-radius: 5px;
+            }
+
+            
+
+            #wed1 {
+                background:url('html2/flowers/f1.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wed1;
+                border-radius: 60px 0 0 0;
+            }
+
+            #wed2 {
+                background:url('html2/flowers/f2.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wed2;
+                border-radius: 0 60px 0 0;
+            }
+
+            #wed3 {
+                background:url('html2/flowers/f11.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wed3;
+            }
+
+            #wed4 {
+                background:url('html2/flowers/f4.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wed4;
+            }
+
+            #wed5 {
+                background:url('html2/flowers/f5.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wed5;
+            }
+
+            #wed6 {
+                background:url('html2/flowers/f6.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wed6;
+            }
+
+            #wed7 {
+                background:url('html2/flowers/f7.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wed7;
+                border-radius: 0 0 60px 0;
+            }
+
+            #wed8 {
+                background:url('html2/flowers/f8.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wed8;
+            }
+
+            #wed9 {
+                background:url('html2/flowers/f10.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wed9;
+            }
+
+            .jb-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas:  "jb1 jb2 jb3"
+                                      "jb4 jb5 jb6"
+                                      "jb7 jb8 jb9";
+                grid-gap:0.35rem;
+                height:1200px;
+                padding: 100px 150px;
+            }
+
+            .jb-grid div {
+                border-radius: 5px;
+            }
+
+            #jb1 {
+                background:url('html2/jb/jb8.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:jb1;
+                border-radius: 60px 0 0 0;
+            }
+
+            #jb2 {
+                background:url('html2/jb/jb9.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:jb2;
+            }
+
+            #jb3 {
+                background:url('html2/jb/jb3.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:jb3;
+                border-radius: 0 60px 0 0;
+            }
+
+            #jb4 {
+                background:url('html2/jb/jb4.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:jb4;
+            }
+
+            #jb5 {
+                background:url('html2/jb/jb5.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:jb5;
+            }
+
+            #jb6 {
+                background:url('html2/jb/jb6.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:jb6;
+            }
+
+            #jb7 {
+                background:url('html2/jb/jb7.JPG') no-repeat center;
+                background-size: contain;
+                grid-area:jb7;
+            }
+
+            #jb8 {
+                background:url('html2/jb/jb1.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:jb8;
+            }
+
+            #jb9 {
+                background:url('html2/jb/jb10.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:jb9;
+                border-radius: 0 0 60px 0;
+            }
+
+            .bridal-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-areas: "brid1 brid2 brid3 brid4"
+                                     "brid5 brid6 brid7 brid8"
+                                     "brid9 brid10 brid11 brid12"
+                                     "brid13 brid14 brid15 brid16"
+                                     "brid17 brid18 brid19 brid20";
+                grid-gap:0.35rem;
+                height:1200px;
+                padding: 100px 150px;
+            }
+
+            .bridal-grid div {
+                border-radius: 5px;
+            }
+
+            #brid1 {
+                background:url('html2/bridal/1.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid1;
+                border-radius: 60px 0 0 0;
+            }
+
+            #brid2 {
+                background:url('html2/bridal/2.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid2;
+            }
+
+            #brid3 {
+                background:url('html2/bridal/3.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid3;
+            }
+
+            #brid4 {
+                background:url('html2/bridal/4.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid4;
+                border-radius: 0 60px 0 0;
+            }
+
+            #brid5 {
+                background:url('html2/bridal/5.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid5;
+            }
+
+            #brid6 {
+                background:url('html2/bridal/6.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid6;
+            }
+
+            #brid7 {
+                background:url('html2/bridal/7.JPG') no-repeat center;
+                background-size: contain;
+                grid-area:brid7;
+            }
+
+            #brid8 {
+                background:url('html2/bridal/8.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid8;
+            }
+
+            #brid9 {
+                background:url('html2/bridal/9.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid9;
+            }
+
+            #brid10 {
+                background:url('html2/bridal/10.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid10;
+            }
+
+            #brid11 {
+                background:url('html2/bridal/11.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid11;
+            }
+
+            #brid12 {
+                background:url('html2/bridal/12.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid12;
+            }
+
+            #brid13 {
+                background:url('html2/bridal/13.PNG') no-repeat center;
+                background-size: cover;
+                grid-area:brid13;
+            }
+
+            #brid14 {
+                background:url('html2/bridal/14.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid14;
+            }
+
+            #brid15 {
+                background:url('html2/bridal/15.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid15;
+            }
+
+            #brid16 {
+                background:url('html2/bridal/16.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid16;
+            }
+
+            #brid17 {
+                background:url('html2/bridal/17.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid17;
+            }
+
+            #brid18 {
+                background:url('html2/bridal/18.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:brid18;
+            }
+
+            #brid19 {
+                background:url('html2/bridal/19.PNG') no-repeat center;
+                background-size: cover;
+                grid-area:brid19;
+            }
+
+            #brid20 {
+                background:url('html2/bridal/20.PNG') no-repeat center;
+                background-size: cover;
+                grid-area:brid20;
+                border-radius: 0 0 60px 0;
+            }
+
+            .ann-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1.2fr 1fr 1fr 1fr;
+                grid-template-areas:  "ann1 ann12 ann6"
+                                      "ann4 ann8 ann6"
+                                      "ann10 ann8 ann3"
+                                      "ann10 ann7 ann5";
+                grid-gap:0.35rem;
+                height:1220px;
+                padding: 100px 150px;
+            }
+
+            .ann-grid div {
+                border-radius: 5px;
+            }
+
+            #ann1 {
+                background:url('html2/ann/1.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann1;
+                border-radius: 60px 0 0 0;
+            }
+
+            #ann2 {
+                background:url('html2/ann/2.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann2;
+            }
+
+            #ann3 {
+                background:url('html2/ann/3.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann3;
+            }
+
+            #ann4 {
+                background:url('html2/ann/4.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann4;
+            }
+
+            #ann5 {
+                background:url('html2/ann/5.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann5;
+                border-radius: 0 0 60px 0;
+            }
+
+            #ann6 {
+                background:url('html2/ann/6.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann6;
+                border-radius: 0 60px 0 0;
+            }
+
+            #ann7 {
+                background:url('html2/ann/7.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann7;
+            }
+
+            #ann8 {
+                background:url('html2/ann/8.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann8;
+            }
+
+            #ann9 {
+                background:url('html2/ann/9.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann9;
+                
+            }
+
+            #ann10 {
+                background:url('html2/ann/10.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann10;
+            }
+
+            #ann11 {
+                background:url('html2/ann/11.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann11;
+                
+            }
+
+            #ann12 {
+                background:url('html2/ann/12.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:ann12;
+            }
+
+            .cent-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 0.8fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-template-areas:  "cent1 cent4 cent3"
+                                      "cent2 cent5 cent6"
+                                      "cent7 cent8 cent9"
+                                      "cent10 cent11 cent12";
+                grid-gap:0.35rem;
+                height:1220px;
+                padding: 100px 150px;
+            }
+
+            .cent-grid div {
+                border-radius: 5px;
+            }
+
+            #cent1 {
+                background:url('html2/cent/1.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent1;
+                border-radius: 60px 5px 5px 5px;
+            }
+
+            #cent2 {
+                background:url('html2/cent/2.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent2;
+            }
+
+            #cent3 {
+                background:url('html2/cent/3.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent3;
+                border-radius: 5px 60px 5px 5px;
+            }
+
+            #cent4 {
+                background:url('html2/cent/4.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent4;
+            }
+
+            #cent5 {
+                background:url('html2/cent/5.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent5;
+            }
+
+            #cent6 {
+                background:url('html2/cent/6.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent6;
+            }
+
+            #cent7 {
+                background:url('html2/cent/7.PNG') no-repeat center;
+                background-size: cover;
+                grid-area:cent7;
+            }
+
+            #cent8 {
+                background:url('html2/cent/8.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent8;
+            }
+
+            #cent9 {
+                background:url('html2/cent/9.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent9;
+                
+            }
+
+            #cent10 {
+                background:url('html2/cent/10.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent10;
+            }
+
+            #cent11 {
+                background:url('html2/cent/11.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent11;
+                
+            }
+
+            #cent12 {
+                background:url('html2/cent/12.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:cent12;
+                border-radius: 5px 5px 60px 5px;
+            }
+
+            .wreat-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-areas:  "wreat7 wreat16 wreat9 wreat9"
+                                      "wreat2 wreat1 wreat1 wreat6"
+                                      "wreat5 wreat5 wreat12 wreat12"
+                                      "wreat14 wreat14 wreat15 wreat15"
+                                      "wreat13 wreat8 wreat3 wreat4";
+                grid-gap:0.35rem;
+                height:1520px;
+                padding: 100px 150px;
+            }
+
+            .wreat-grid div {
+                border-radius: 5px;
+            }
+
+            #wreat1 {
+                background:url('html2/wreat/1.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat1;
+            }
+
+            #wreat2 {
+                background:url('html2/wreat/2.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat2;
+            }
+
+            #wreat3 {
+                background:url('html2/wreat/3.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat3;
+            }
+
+            #wreat4 {
+                background:url('html2/wreat/4.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat4;
+                border-radius: 5px 5px 60px 5px;
+            }
+
+            #wreat5 {
+                background:url('html2/wreat/5.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat5;
+            }
+
+            #wreat6 {
+                background:url('html2/wreat/6.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat6;
+            }
+
+            #wreat7 {
+                background:url('html2/wreat/7.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat7;
+                border-radius: 60px 5px 5px 5px;
+            }
+
+            #wreat8 {
+                background:url('html2/wreat/8.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat8;
+            }
+
+            #wreat9 {
+                background:url('html2/wreat/9.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat9;
+                border-radius: 5px 60px 5px 5px;
+                
+            }
+
+            #wreat10 {
+                background:url('html2/wreat/10.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat10;
+            }
+
+            #wreat11 {
+                background:url('html2/wreat/11.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat11;
+                
+            }
+
+            #wreat12 {
+                background:url('html2/wreat/12.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat12;
+            }
+
+            #wreat13 {
+                background:url('html2/wreat/13.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat13;
+            }
+            #wreat14 {
+                background:url('html2/wreat/14.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat14;
+            }
+            #wreat15 {
+                background:url('html2/wreat/15.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat15;
+            }
+            #wreat16 {
+                background:url('html2/wreat/16.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:wreat16;
+            }
+
+            .art-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-template-areas:  "art6 art2 art3 art4"
+                                      "art8 art15 art7 art16"
+                                      "art9 art14 art11 art12"
+                                      "art13 art13 art10 art10";
+                grid-gap:0.35rem;
+                height:1220px;
+                padding: 100px 50px;
+            }
+
+            .art-grid div {
+                border-radius: 5px;
+            }
+
+            #art1 {
+                background:url('html2/art/1.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art1;
+            }
+
+            #art2 {
+                background:url('html2/art/2.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art2;
+            }
+
+            #art3 {
+                background:url('html2/art/3.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art3;
+            }
+
+            #art4 {
+                background:url('html2/art/4.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art4;
+                border-radius: 5px 60px 5px 5px;
+            }
+
+            #art5 {
+                background:url('html2/art/5.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art5;
+            }
+
+            #art6 {
+                background:url('html2/art/6.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art6;
+                border-radius: 60px 5px 5px 5px;
+            }
+
+            #art7 {
+                background:url('html2/art/7.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art7;
+            }
+
+            #art8 {
+                background:url('html2/art/8.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art8;
+            }
+
+            #art9 {
+                background:url('html2/art/9.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art9;
+                
+            }
+
+            #art10 {
+                background:url('html2/art/10.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art10;
+                border-radius: 5px 5px 60px 5px;
+            }
+
+            #art11 {
+                background:url('html2/art/11.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art11;
+                
+            }
+
+            #art12 {
+                background:url('html2/art/12.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art12;
+            }
+
+            #art13 {
+                background:url('html2/art/13.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art13;
+            }
+            #art14 {
+                background:url('html2/art/14.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art14;
+            }
+            #art15 {
+                background:url('html2/art/15.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art15;
+            }
+            #art16 {
+                background:url('html2/art/16.JPG') no-repeat center;
+                background-size: cover;
+                grid-area:art16;
+            }
+
+
+            .grid-div {
+                margin:0 50px 0px 50px;
+                padding-top:30px;
+                padding-bottom:30px;
+            }
+
+            .social-menu ul {
+                padding:0;
+                margin:0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .social-menu ul li {
+                list-style-type: none;
+                margin:10px;
+                transform: translateY(0);
+                transition: 0.4s;
+            }
+
+
+            .svg-inline--fa {
+                line-height:50px;
+                font-size:25px;
+                border-radius: 100%;
+                transition: 0.4s;
+            }
+
+            .fa-instagram {
+                padding:14px 16px;
+                font-size: 30px;
+                transition: 0.4s;
+                color:#ffffff;
+                background:url('html2/igb.jpg') no-repeat center;
+                background-size: cover;
+            }
+
+            .fa-instagram:hover {
+                transform: translateY(-7px);
+                transition: 0.4s;
+            }
+
+            .fa-facebook-f {
+                padding: 15px 20px;
+                color:rgb(255, 255, 255);
+                background-color: #573aff;
+                transition:0.4s;
+            }
+
+            .fa-facebook-f:hover {
+                transform: translateY(-7px);
+                transition: 0.4s;
+            }
+
+            footer {
+                position: relative;
+                background-color: rgba(0, 0, 0, 0.822);
+                padding:2px;
+                color:rgba(255, 255, 255, 0.432);
+                font-size: 15px;
+            }
+
+            .made {
+                position: absolute;
+                bottom:0;
+                right:80px;
+                font-size:15px;
+                color:rgb(235, 235, 235);
+                background-color: rgb(253, 34, 34);
+                font-family: 'Open Sans',sans serif;
+                padding:10px 15px;
+                margin-bottom: 0;
+                border-radius:15px 15px 0 0;
+            }
+
+            @media only screen and (max-width: 600px) {
+                header {
+                position: absolute;
+                visibility: hidden;
+                width:100%;
+                height:48px;
+                top:0;
+                background-color:#eeeeeef6;
+                box-shadow:2px 2px 25px rgb(0, 0, 0);
+                border-bottom: 2px solid #ff00c8;
+                z-index: 100;
+                display: flex;
+                justify-content: center;
+                align-items:center ;
+                transition: 0.2s;
+                
+            }
+
+            .cg-div {
+                display:grid;
+                grid-template-columns: 130px 130px;
+                grid-template-rows: 130px 130px;
+                grid-template-areas:"cat1 cat2"
+                                    "cat3 cat4";
+                justify-content: center;
+                align-items: center;
+                grid-gap: 0.6rem;
+                width: 100%;
+            }
+
+            .cg-content:hover {
+                width:40px;
+                height:40px;
+                transition: 0.4s;
+            }
+
+            .c1 {
+                grid-area: cat1;
+            }
+
+            .c2 {
+                grid-area: cat2;
+            }
+
+            .c3 {
+                grid-area: cat3;
+            }
+
+            .c4 {
+                grid-area: cat4;
+            }
+
+            .cg-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin:0 auto;
+                padding:40px;
+                width:40px;
+                height:40px;
+            }
+
+            #anni {
+                font-size:16px;
+            }
+
+            #anni:hover {
+                font-size: 16px;
+            }
+
+            #ctr {
+                font-size: 16px;
+            }
+
+            #ctr:hover {
+                font-size: 16px;
+            }
+
+            header a {
+                padding:0;
+                margin-left:0;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+                border-radius: 4px;
+                border:1px solid transparent;
+                color:#ff00c8;
+                transition: 0.4s;
+            }
+                
+                
+                .wedding-grid {
+                display:grid;    
+                grid-template-columns: 150px 150px;
+                grid-template-rows: 180px 150px 150px 150px;
+                grid-template-areas: "wed1 wed2"
+                                     "wed3 wed4"
+                                     "wed5 wed6"
+                                     "wed7 wed8";
+                grid-gap:0.2rem;
+                height: 600px;
+                padding:100px 0;
+                justify-content: center;
+                
+            }
+
+            #wed1 {
+                border-radius: 20px 5px 5px 5px;
+            }
+
+            #wed2 {
+                border-radius: 5px 20px 5px 5px;
+            }
+
+            #wed7 {
+                border-radius:5px;
+            }
+
+            #wed8 {
+                border-radius: 5px 5px 20px 5px;
+            }
+
+            .jb-grid {
+                display: grid;
+                grid-template-columns: 150px 150px;
+                grid-template-rows: 180px 180px 150px 150px;
+                grid-template-areas:  "jb1 jb2"
+                                      "jb3 jb4"
+                                      "jb5 jb6"
+                                      "jb7 jb8";
+                grid-gap:0.2rem;
+                height:600px;
+                padding: 100px 0;
+                justify-content: center;
+            }
+
+            #jb1 {
+                border-radius:20px 5px 5px 5px;
+            }
+
+            #jb2 {
+                border-radius:5px 20px 5px 5px;
+            }
+
+            #jb3 {
+                border-radius:5px;
+            }
+
+            #jb8 {
+                border-radius:5px 5px 20px 5px;
+            }
+
+            .ann-grid {
+                display: grid;
+                grid-template-columns: 150px 150px;
+                grid-template-rows: 180px 150px 150px 150px 180px 150px;
+                grid-template-areas:  "ann1 ann2"
+                                      "ann3 ann4"
+                                      "ann5 ann6"
+                                      "ann7 ann8"
+                                      "ann9 ann10"
+                                      "ann11 ann12";
+                grid-gap:0.2rem;
+                height:900px;
+                padding: 100px 0;
+                justify-content: center;
+            }
+
+            #ann1 {
+                border-radius:20px 5px 5px 5px;
+            }
+
+            #ann2 {
+                border-radius:5px 20px 5px 5px;
+            }
+
+            #ann5 {
+                border-radius: 5px;
+            }
+
+            #ann6 {
+                border-radius:5px;
+            }
+
+            #ann12 {
+                border-radius:5px 5px 20px 5px;
+            }
+
+            .bridal-grid {
+                display: grid;
+                grid-template-columns: 150px 150px;
+                grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px 150px 150px;
+                grid-template-areas: "brid1 brid2"
+                                     "brid3 brid4"
+                                     "brid5 brid6"
+                                     "brid7 brid8"
+                                     "brid9 brid10"
+                                     "brid11 brid12"
+                                     "brid13 brid14"
+                                     "brid15 brid16"
+                                     "brid17 brid18"
+                                     "brid19 brid20";
+                grid-gap:0.2rem;
+                height:1500px;
+                padding: 100px 0;
+                justify-content: center;
+            }
+
+            #brid1 {
+                border-radius: 20px 5px 5px 5px;
+            }
+
+            #brid2 {
+                border-radius:5px 20px 5px 5px;
+            }
+
+            #brid4 {
+                border-radius: 5px;
+            }
+
+            #brid20 {
+                border-radius: 5px 5px 20px 5px;
+            }
+
+            .cent-grid {
+                display: grid;
+                grid-template-columns: 150px 150px;
+                grid-template-rows: 150px 150px 150px 150px 150px 150px;
+                grid-template-areas:  "cent1 cent2"
+                                      "cent3 cent4"
+                                      "cent5 cent6"
+                                      "cent7 cent8"
+                                      "cent9 cent10"
+                                      "cent11 cent12";
+                grid-gap:0.2rem;
+                height:1000px;
+                padding: 100px 0;
+                justify-content: center;
+            }
+
+            #cent1 {
+                border-radius: 20px 5px 5px 5px;
+            }
+
+            #cent2 {
+                border-radius:5px 20px 5px 5px;
+            }
+
+            #cent3 {
+                border-radius: 5px;
+            }
+
+            #cent12 {
+                border-radius: 5px 5px 20px 5px;
+            }
+
+            .wreat-grid {
+                display: grid;
+                grid-template-columns:150px 150px;
+                grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px;
+                grid-template-areas: "wreat1 wreat2"
+                                     "wreat14 wreat16"
+                                     "wreat5 wreat6"
+                                     "wreat7 wreat8"
+                                     "wreat9 wreat10"
+                                     "wreat11 wreat12"
+                                     "wreat13 wreat3"
+                                     "wreat15 wreat4";
+                grid-gap:0.2rem;
+                height:1200px;
+                padding: 100px 0;
+                justify-content: center;
+            }
+
+            #wreat1 {
+                border-radius: 20px 5px 5px 5px;
+            }
+
+            #wreat2 {
+                border-radius:5px 20px 5px 5px;
+            }
+
+            #wreat7 {
+                border-radius: 5px;
+            }
+
+            #wreat9 {
+                border-radius: 5px;
+            }
+
+            #wreat4 {
+                border-radius: 5px 5px 20px 5px;
+            }
+
+            .art-grid {
+                display: grid;
+                grid-template-columns:150px 150px;
+                grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px;
+                grid-template-areas: "art1 art2"
+                                     "art3 art4"
+                                     "art5 art6"
+                                     "art7 art8"
+                                     "art9 art10"
+                                     "art11 art12"
+                                     "art13 art14"
+                                     "art15 art16";
+                grid-gap:0.2rem;
+                height:1220px;
+                padding: 100px 0;
+                justify-content: center;
+            }
+
+            #art1 {
+                border-radius: 20px 5px 5px 5px;
+            }
+
+            #art2 {
+                border-radius:5px 20px 5px 5px;
+            }
+
+            #art4, #art6, #art10 {
+                border-radius: 5px;
+            }
+
+            #art16 {
+                border-radius: 5px 5px 20px 5px;
+            }
+
+
+            #title1 {
+                font-size: 32px;
+                font-family: 'Merienda One', cursive;
+                transform: translateY(50%);
+            }
+
+            .paralx {
+                height: 180px;
+            }
+
+            .social-menu ul {
+                padding:0;
+                margin:0 auto;
+            }
+
+            .made {
+               position: absolute;
+               bottom: -40.5px;
+               right: 0;
+               width: 100%;
+               font-size: 15px;
+               color: rgb(235, 235, 235);
+               background-color: rgb(253, 34, 34);
+               font-family: 'Open Sans',sans serif;
+               padding: 11px 0;
+               border-radius: 0;
+            }
+            }
+
+            @media only screen and (width:568px) {
+                .cg-div {
+                    display: flex;
+               width: 100%;
+               overflow-x: scroll;
+            }
+
+            .cg-content {
+              width: 20px;
+              height: 20px;
+              margin: 0 3px;
+            }
+
+            .c1 {
+                margin-left: 687px;
+            }
+
+            .c7 {
+                margin-right: 420px;
+            }
+
+            .grid-div {
+                margin: 0 18px 0 18px;
+            }
+
+            .wedding-grid {
+                padding:100px 0;
+            }
+
+            .jb-grid {
+                padding:100px 0;
+            }
+
+            .ann-grid {
+                padding:100px 0;
+            }
+
+            .bridal-grid {
+                padding:100px 0;
+                height:1007px
+            }
+
+            #brid7 {
+                background-size: cover;
+            }
+
+            .cent-grid {
+                padding:100px 0;
+            }
+
+            .wreat-grid {
+                padding:100px 0;
+            }
+
+            .art-grid {
+                padding:100px 0;
+                height:795px;
+            }
+            }
+
+            @media only screen and (min-width:660px) and (max-width:1024px) {
+
+            #title1 {
+                transform: translate(0,60px);
+            }
+            
+            .cg-div {
+               width: 100%;
+               overflow-x: scroll;
+            }
+
+            .cg-content {
+              width: 27px;
+              height: 27px;
+              margin: 0 15px;
+            }
+
+            .c1 {
+                margin-left: 687px;
+            }
+
+            .c7 {
+                margin-right: 420px;
+            }
+
+            .grid-div {
+                margin: 0 18px 0 18px;
+            }
+
+            .wedding-grid {
+                padding:100px 0;
+            }
+
+            .jb-grid {
+                padding:100px 0;
+            }
+
+            .ann-grid {
+                padding:100px 0;
+            }
+
+            .bridal-grid {
+                padding:100px 0;
+                height:1007px
+            }
+
+            #brid7 {
+                background-size: cover;
+            }
+
+            .cent-grid {
+                padding:100px 0;
+            }
+
+            .wreat-grid {
+                padding:100px 0;
+            }
+
+            .art-grid {
+                padding:100px 0;
+                height:795px;
+            }
+
+            .made {
+            right:57px;
+        }
+        }    
+
+        </style>
+    </head>
+    <body>
+      <div class="container" id="scroll-here">
+          <div id="goto-top"><a href="#scroll-here" title="Scroll To the Top">▲</a></div>
+        <header id="header">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <img src="html2/icon.png" width="120px" id="logo">
+           <div class="dropdown">
+            <a href="gallery.html" id="gallery">Flowers</a>
+                  <div class="drop-content">
+                    <a id="top-a" href="gallery.html#link">Birthdays</a>
+                    <a href="gallery.html#link2">Just Because</a>
+                    <a href="gallery.html#link3">Anniversary</a>
+                    <a href="gallery.html#link4">Bridal</a>
+                    <a href="gallery.html#link5">Centerpieces</a>
+                    <a href="gallery.html#link6">Wreaths</a>
+                    <a id="bottom-a" href="gallery.html#link7">Artificial catalogue</a>
+                  </div>
+           </div>       
+            <a href="contact.html">Contact</a>
+        </header>
+        <div class="paralx"> 
+            <div id="title1">Flowers</div> 
+        </div>
+          <div class="cg-div">
+              <a class="cg-content c1" href="#link">Birthdays</a>
+              <a class="cg-content c2" href="#link2">Just Because</a>
+              <a class="cg-content c3" href="#link3" id="anni">Anniversarys</a>
+              <a class="cg-content c4" href="#link4">Bridal</a>
+              <a class="cg-content c5" href="#link5" id="ctr">Centerpieces</a>
+              <a class="cg-content c6" href="#link6">Wreaths</a>
+              <a class="cg-content c7" href="#link7">Artificial catalogue</a>
+
+          </div>
+          <div class="grid-div" id="link">
+           <div id="wed-title">Birthdays</div>
+           <div class="wedding-grid">
+              <div id="wed1"></div>
+              <div id="wed2"></div>
+              <div id="wed3"></div>
+              <div id="wed4"></div>
+              <div id="wed5"></div>
+              <div id="wed6"></div>
+              <div id="wed7"></div>
+              <div id="wed8"></div>
+              <div id="wed9"></div>
+           </div>
+          </div> 
+          <div class="paralx2">
+
+          </div>
+          <div class="grid-div" id="link2">
+            <div id="wed-title">Just Because</div>
+            <div class="jb-grid">
+                <div id="jb1"></div>
+                <div id="jb2"></div>
+                <div id="jb3"></div>
+                <div id="jb4"></div>
+                <div id="jb5"></div>
+                <div id="jb6"></div>
+                <div id="jb7"></div>
+                <div id="jb8"></div>
+                <div id="jb9"></div>
+            </div>
+           </div>
+           <div class="grid-div" id="link3">
+            <div id="wed-title">Anniversary</div>
+            <div class="ann-grid">
+                <div id="ann1"></div>
+                <div id="ann2"></div>
+                <div id="ann3"></div>
+                <div id="ann4"></div>
+                <div id="ann5"></div>
+                <div id="ann6"></div>
+                <div id="ann7"></div>
+                <div id="ann8"></div>
+                <div id="ann9"></div>
+                <div id="ann10"></div>
+                <div id="ann11"></div>
+                <div id="ann12"></div>
+            </div>
+           </div>
+           <div class="grid-div" id="link4">
+            <div id="wed-title">Bridal</div>
+            <div class="bridal-grid">
+                <div id="brid1"></div>
+                <div id="brid2"></div>
+                <div id="brid3"></div>
+                <div id="brid4"></div>
+                <div id="brid5"></div>
+                <div id="brid6"></div>
+                <div id="brid7"></div>
+                <div id="brid8"></div>
+                <div id="brid9"></div>
+                <div id="brid10"></div>
+                <div id="brid11"></div>
+                <div id="brid12"></div>
+                <div id="brid13"></div>
+                <div id="brid14"></div>
+                <div id="brid15"></div>
+                <div id="brid16"></div>
+                <div id="brid17"></div>
+                <div id="brid18"></div>
+                <div id="brid19"></div>
+                <div id="brid20"></div>
+            </div>
+           </div> 
+           <div class="grid-div" id="link5">
+            <div id="wed-title">Centerpieces</div>
+            <div class="cent-grid">
+                <div id="cent1"></div>
+                <div id="cent2"></div>
+                <div id="cent3"></div>
+                <div id="cent4"></div>
+                <div id="cent5"></div>
+                <div id="cent6"></div>
+                <div id="cent7"></div>
+                <div id="cent8"></div>
+                <div id="cent9"></div>
+                <div id="cent10"></div>
+                <div id="cent11"></div>
+                <div id="cent12"></div>
+            </div>
+           </div>
+           <div class="grid-div" id="link6">
+            <div id="wed-title">Wreaths</div>
+            <div class="wreat-grid">
+                <div id="wreat1"></div>
+                <div id="wreat2"></div>
+                <div id="wreat3"></div>
+                <div id="wreat4"></div>
+                <div id="wreat5"></div>
+                <div id="wreat6"></div>
+                <div id="wreat7"></div>
+                <div id="wreat8"></div>
+                <div id="wreat9"></div>
+                <div id="wreat10"></div>
+                <div id="wreat11"></div>
+                <div id="wreat12"></div>
+                <div id="wreat13"></div>
+                <div id="wreat14"></div>
+                <div id="wreat15"></div>
+                <div id="wreat16"></div>
+            </div>
+           </div>
+           <div class="grid-div" id="link7">
+            <div id="wed-title">Artificial catalogue</div>
+            <div class="art-grid">
+                <div id="art1"></div>
+                <div id="art2"></div>
+                <div id="art3"></div>
+                <div id="art4"></div>
+                <div id="art5"></div>
+                <div id="art6"></div>
+                <div id="art7"></div>
+                <div id="art8"></div>
+                <div id="art9"></div>
+                <div id="art10"></div>
+                <div id="art11"></div>
+                <div id="art12"></div>
+                <div id="art13"></div>
+                <div id="art14"></div>
+                <div id="art15"></div>
+                <div id="art16"></div>
+            </div>
+           </div>
+           <footer>
+            <div class="social-menu"> 
+              <ul class="social">
+                  <li><a href="https://www.facebook.com/seematouchofclass.kelvin" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.instagram.com/touchofclassfloralstyles/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+              <div class="made">MADE BY JEDIAH RAMPERSAD</div>
+            </div>
+          </footer>  
+        </div>
+        <div id="content">
+            <span class="slide">
+               <a href="#" onclick="openSlideMenu()">
+                 <i class="fas fa-bars"></i>
+               </a>
+            </span>
+            <div id="menu" class="nav">
+                <a href="#" class="close" onclick="closeSlideMenu()">
+                    <i class="fas fa-times"></i>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                </a>
+         </div> 
+      <script src="html2/scroll-out.js"></script>
+      <script type="text/javascript">
+         ScrollOut ({
+             targets: 'h1,h2,#main,#imagediv,h3,p,a'
+         })
+      </script>
+    </body>
+</html>
